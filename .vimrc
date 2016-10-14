@@ -18,6 +18,7 @@ NeoBundle 'Shougo/vimproc', {
   " My Bundles here
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'tpope/vim-surround'
+  NeoBundle 'fatih/vim-go'
   NeoBundle 'vim-scripts/Lucius'
   NeoBundle 'Indent-Guides'
   NeoBundle 'The-NERD-tree'
@@ -26,8 +27,8 @@ NeoBundle 'Shougo/vimproc', {
   NeoBundle 'thinca/vim-ft-svn_diff'
   NeoBundle 'vim-scripts/yanktmp.vim'
   NeoBundle 'Align'
-  NeoBundle 'Shougo/neocomplcache'
-  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neocomplcache.git'
+  NeoBundle 'Shougo/neosnippet.git'
   NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'rhysd/committia.vim'
   NeoBundle 'mattn/jscomplete-vim'
@@ -111,8 +112,8 @@ set t_Co=256
 " 'Indent-Guides'
 "----------------------------------------------------
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=235 ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=237 ctermbg=237
+autocmd VimEnter,Colorscheme :hi IndentGuidesOdd  guibg=235 ctermbg=235
+autocmd VimEnter,Colorscheme :hi IndentGuidesEven guibg=237 ctermbg=237
 let g:indent_guides_enable_on_vim_startup = 1
 
 "----------------------------------------------------
@@ -306,3 +307,12 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+"" go
+"autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+"autocmd FileType go :match goErr /\<err\>/
+
+let g:rails_statusline = 0
+let g:padrino_statusline=0
+"set clipboard=autoselect
+set undodir=/tmp/vim/undo
