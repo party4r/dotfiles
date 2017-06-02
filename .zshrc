@@ -80,3 +80,4 @@ PATH=$HOME/local/bin:/usr/local/bin:${PATH}
 NOW=`date +%Y%m%d`
 alias elog="tail -f /var/log/apache2/error_log.$NOW"
 alias alog="tail -f /var/log/apache2/access_log.$NOW"
+alias ack="ack-grep"

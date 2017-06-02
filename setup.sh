@@ -35,7 +35,7 @@ make_ctags() {
 make_vim_neobundle() {
     cd ~
     mkdir -p ~/.vim/bundle
-    git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 }
 
 clean_dotfiles() {
