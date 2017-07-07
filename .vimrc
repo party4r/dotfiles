@@ -32,6 +32,7 @@ NeoBundle 'Shougo/vimproc', {
   NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'rhysd/committia.vim'
   NeoBundle 'mattn/jscomplete-vim'
+  NeoBundle 'jwalton512/vim-blade'
   autocmd FileType javascript
     \ :setl omnifunc=jscomplete#CompleteJS
 call neobundle#end()
@@ -316,3 +317,14 @@ let g:rails_statusline = 0
 let g:padrino_statusline=0
 "set clipboard=autoselect
 set undodir=/tmp/vim/undo
+" vim-surround
+autocmd FileType php let b:surround_{char2nr("l")} = "{{ __('r') }}"
+
+" Define some single Blade directives. This variable is used for highlighting only.
+let g:blade_custom_directives = ['datetime', 'javascript']
+
+" Define pairs of Blade directives. This variable is used for highlighting and indentation.
+let g:blade_custom_directives_pairs = {
+      \   'markdown': 'endmarkdown',
+      \   'cache': 'endcache',
+      \ }

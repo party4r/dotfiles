@@ -72,4 +72,4 @@ setup
 clean_dotfiles dotList
 make_sym dotList
 make_vim_neobundle
-make_ack
+#make_ack

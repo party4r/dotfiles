@@ -77,7 +77,4 @@ function cd() {
 PATH=$HOME/local/bin:/usr/local/bin:${PATH}
 #export GEM_HOME=$HOME/Software/ruby
 #export PATH=$PATH:$HOME/Software/ruby/bin
-NOW=`date +%Y%m%d`
-alias elog="tail -f /var/log/apache2/error_log.$NOW"
-alias alog="tail -f /var/log/apache2/access_log.$NOW"
 alias ack="ack-grep"
