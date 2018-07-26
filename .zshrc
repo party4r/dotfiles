@@ -69,6 +69,7 @@ autoload -U colors; colors
 tmp_prompt="%{${fg[cyan]}%}%n [%~] %# %{${reset_color}%}"
 PROMPT=$tmp_prompt 
 PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+alias ls='ls --color'
 
 # cdコマンド実行後、lsを実行する
 function cd() {
