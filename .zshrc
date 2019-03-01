@@ -69,12 +69,19 @@ autoload -U colors; colors
 tmp_prompt="%{${fg[cyan]}%}%n [%~] %# %{${reset_color}%}"
 PROMPT=$tmp_prompt 
 PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+alias ls="ls --color"
+alias ll="ls -la"
 
 # cdコマンド実行後、lsを実行する
 function cd() {
   builtin cd $@ && ls;
 }
-PATH=$HOME/local/bin:/usr/local/bin:${PATH}
 #export GEM_HOME=$HOME/Software/ruby
 #export PATH=$PATH:$HOME/Software/ruby/bin
 alias ack="ack-grep"
+export PATH=~/.local/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export GIT_PAGER="LESSCHARSET=utf-8 less"
+

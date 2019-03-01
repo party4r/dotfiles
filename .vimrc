@@ -19,6 +19,7 @@ NeoBundle 'Shougo/vimproc', {
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'fatih/vim-go'
+  NeoBundle 'moll/vim-node'
   NeoBundle 'vim-scripts/Lucius'
   NeoBundle 'Indent-Guides'
   NeoBundle 'The-NERD-tree'
@@ -324,7 +325,22 @@ autocmd FileType php let b:surround_{char2nr("l")} = "{{ __('r') }}"
 let g:blade_custom_directives = ['datetime', 'javascript']
 
 " Define pairs of Blade directives. This variable is used for highlighting and indentation.
-let g:blade_custom_directives_pairs = {
-      \   'markdown': 'endmarkdown',
-      \   'cache': 'endcache',
-      \ }
+"let g:blade_custom_directives_pairs = {
+"      \   'markdown': 'endmarkdown',
+"      \   'cache': 'endcache',
+"      \ }
+"
+"let g:syntastic_check_on_open=0 "ファイルを開いたときはチェックしない
+"let g:syntastic_check_on_save=1 "保存時にはチェック
+"let g:syntastic_check_on_wq = 0 " wqではチェックしない
+"let g:syntastic_auto_loc_list=1 "エラーがあったら自動でロケーションリストを開く
+"let g:syntastic_loc_list_height=6 "エラー表示ウィンドウの高さ
+"set statusline+=%#warningmsg# "エラーメッセージの書式
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_javascript_checkers = ['eslint'] "ESLintを使う
+"let g:syntastic_mode_map = {
+"      \ 'mode': 'active',
+"      \ 'active_filetypes': ['javascript'],
+"      \ 'passive_filetypes': []
+"      \ }
