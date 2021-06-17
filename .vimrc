@@ -34,6 +34,7 @@ NeoBundle 'Shougo/vimproc', {
   NeoBundle 'rhysd/committia.vim'
   NeoBundle 'mattn/jscomplete-vim'
   NeoBundle 'jwalton512/vim-blade'
+  NeoBundle 'chr4/nginx.vim'
   autocmd FileType javascript
     \ :setl omnifunc=jscomplete#CompleteJS
 call neobundle#end()
